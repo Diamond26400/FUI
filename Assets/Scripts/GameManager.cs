@@ -16,15 +16,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
-   
+
     IEnumerator spawnTarget()
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(spawnRate);
-                int index = Random.Range(0, Targets.Count);
+            int index = Random.Range(0, Targets.Count);
             Instantiate(Targets[index]);
         }
     }
