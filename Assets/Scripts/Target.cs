@@ -20,17 +20,20 @@ public class Target : MonoBehaviour
         targetRb.AddTorque(RandomTorue(), RandomTorue(), RandomTorue());
 
         transform.position = SpawnPos();
+       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
+       
     }
-    private void OnMouseDown()
+   private void OnMouseDown()
     {
         Destroy(gameObject);
+        Debug.Log("key is being presseed");
     }
     private void OnTriggerEnter(Collider other)
     {
