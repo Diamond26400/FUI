@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public float spawnRate = 1.0f;
     public TextMeshProUGUI ScoreText;
     private int score;
+   
  
     // Start is called before the first frame update
     void Start()
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
             UpdateScore(5);
         }
     }
-    private void UpdateScore (int ScoreToUpdate)
+    public void UpdateScore (int ScoreToUpdate)
     {
         score += ScoreToUpdate;
         ScoreText.text = "Score: " + score;
