@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
             int index = Random.Range(0, Targets.Count);
             Instantiate(Targets[index]);
-            UpdateScore(5);
+         
         }
     }
     public void UpdateScore (int ScoreToUpdate)
