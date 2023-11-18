@@ -25,8 +25,8 @@ public class Target : MonoBehaviour
         targetRb.AddTorque(RandomTorue(), RandomTorue(), RandomTorue());
 
         transform.position = SpawnPos();
+
        
-        
     }
 
     // Update is called once per frame
@@ -37,10 +37,14 @@ public class Target : MonoBehaviour
     }
    private void OnMouseDown()
     {
-        Instantiate(ExplosionP, transform.position, ExplosionP.transform.rotation);
-        Destroy(gameObject);
-        gameManager.UpdateScore(pointValue);
-        Debug.Log("key is being presseed");
+        if (gameManager.IsgameActive)
+        {
+            Instantiate(ExplosionP, transform.position, ExplosionP.transform.rotation);
+            Destroy(gameObject);
+            gameManager.UpdateScore(pointValue);
+            Debug.Log("key is being presseed");
+        }
+        
     }
     private void OnTriggerEnter(Collider other)
     {
