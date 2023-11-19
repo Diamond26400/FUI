@@ -17,10 +17,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine((spawnTarget()));
-        UpdateScore(0);
-
-        IsgameActive = true;
+        StartGame();
     }
 
     // Update is called once per frame
@@ -50,5 +47,11 @@ public class GameManager : MonoBehaviour
         IsgameActive = false;
         GameOver.gameObject.SetActive(true);
     }
+    public void StartGame()
+    {
+        StartCoroutine((spawnTarget()));
+        UpdateScore(0);
 
+        IsgameActive = true;
+    }
 }
