@@ -25,6 +25,13 @@ public class GameManager : MonoBehaviour
     {
 
     }
+    public void StartGame()
+    {
+        StartCoroutine((spawnTarget()));
+        UpdateScore(0);
+
+        IsgameActive = true;
+    }
 
     IEnumerator spawnTarget()
     {
@@ -47,11 +54,5 @@ public class GameManager : MonoBehaviour
         IsgameActive = false;
         GameOver.gameObject.SetActive(true);
     }
-    public void StartGame()
-    {
-        StartCoroutine((spawnTarget()));
-        UpdateScore(0);
-
-        IsgameActive = true;
-    }
+  
 }

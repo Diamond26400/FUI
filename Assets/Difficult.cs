@@ -5,8 +5,9 @@ using UnityEngine.TextCore.LowLevel;
 using UnityEngine.UI;
 public class Difficult : MonoBehaviour
 {
-    private Button button;
     private GameManager gameManager;
+    private Button button;
+   
     // Start is called before the first frame update
     void Start()
     {
