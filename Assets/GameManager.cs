@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
         IsgameActive = true;
 
         TitleScreen.gameObject.SetActive(false);
+        IngameUi.gameObject.SetActive(true);
     }
 
 
