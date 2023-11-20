@@ -7,6 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public List<GameObject> Targets;
+    public GameObject TitleScreen;
     public float spawnRate = 1.0f;
     public TextMeshProUGUI ScoreText;
     public TextMeshProUGUI GameOver;
