@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private int score;
     public bool IsgameActive;
     public GameObject IngameUi;
-
+  
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         GameOver.gameObject.SetActive(true);
         IngameUi.gameObject.SetActive(true);
     }
-    public void StartGame()
+    public void StartGame(int Difficulty)
     {
         StartCoroutine((spawnTarget()));
         UpdateScore(0);
@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
 
         TitleScreen.gameObject.SetActive(false);
         IngameUi.gameObject.SetActive(false);
+
+        spawnRate /= Difficulty;
     }
 
 
