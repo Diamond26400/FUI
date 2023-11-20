@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
         score = 0;
         IsgameActive = true;
+
+        TitleScreen.gameObject.SetActive(false);
     }
 
 
