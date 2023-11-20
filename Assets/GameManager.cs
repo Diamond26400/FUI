@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
         
         IsgameActive = false;
         GameOver.gameObject.SetActive(true);
+        IngameUi.gameObject.SetActive(true);
     }
     public void StartGame()
     {
@@ -57,7 +58,7 @@ public class GameManager : MonoBehaviour
         IsgameActive = true;
 
         TitleScreen.gameObject.SetActive(false);
-        IngameUi.gameObject.SetActive(true);
+        IngameUi.gameObject.SetActive(false);
     }
 
 
