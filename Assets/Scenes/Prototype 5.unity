@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7aaaee9894e8d4d97601b34ef4d2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Difficulty: 2
+  Difficulty: 1
 --- !u!114 &264511955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,8 +402,6 @@ GameObject:
   m_Component:
   - component: {fileID: 534669905}
   - component: {fileID: 534669904}
-  - component: {fileID: 534669906}
-  - component: {fileID: 534669907}
   - component: {fileID: 534669908}
   m_Layer: 0
   m_Name: Main Camera
@@ -478,31 +476,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 731401066}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &534669906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbda5a18f76fa054ebe599c09eab8933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &534669907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd7aaaee9894e8d4d97601b34ef4d2b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Difficulty: 0
 --- !u!81 &534669908
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1049,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7aaaee9894e8d4d97601b34ef4d2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Difficulty: 3
+  Difficulty: 2
 --- !u!114 &884540174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1281,7 +1254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd7aaaee9894e8d4d97601b34ef4d2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Difficulty: 4
+  Difficulty: 3
 --- !u!114 &1294751491
 MonoBehaviour:
   m_ObjectHideFlags: 0
