@@ -51,7 +51,7 @@ public class Target : MonoBehaviour
         Destroy(gameObject);
         if (!gameObject.CompareTag("Bad"))
         {
-            gameManager.Gameover();
+            gameManager.UpdateLive(-1);
         }
     }
     Vector3 RandomForce ()
