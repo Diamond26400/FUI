@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
             liveText.text = "Lives: " + lives;
         } if (lives <= 0)
         {
+            lives = 0;
             Gameover();
         }
         
