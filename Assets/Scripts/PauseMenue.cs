@@ -42,7 +42,7 @@ public class PauseMenue : MonoBehaviour
         pauseUi.SetActive(true);
     }
 
-    private void ResumeGame()
+    public void ResumeGame()
     {
         Time.timeScale = 1f; // Resume the game by setting time scale back to 1
         pauseUi.SetActive(false);
