@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PauseMenue : MonoBehaviour
 {
-    public GameObject pauseUi;
+    public GameObject IngameUi;
     public KeyCode pauseKey = KeyCode.Escape;
     private bool Ispaused;
     public Restart restart;
@@ -16,7 +16,7 @@ public class PauseMenue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pauseUi.gameObject.SetActive(false);
+        IngameUi.gameObject.SetActive(false);
     }
     private void Update()
     {
@@ -44,13 +44,13 @@ public class PauseMenue : MonoBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0f; // Pause the game by setting time scale to 0
-        pauseUi.gameObject.SetActive(true);
+        IngameUi.gameObject.SetActive(true);
     }
 
     public void ResumeGame()
     {
         Time.timeScale = 1f; // Resume the game by setting time scale back to 1
-        pauseUi.SetActive(false);
+        IngameUi.SetActive(false);
     }
 
     // Add methods for resume, restart, and quit buttons as needed
