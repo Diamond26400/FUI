@@ -10,9 +10,9 @@ public class PauseMenue : MonoBehaviour
     private bool Ispaused;
     public Restart restart;
 
-    public TextMeshProUGUI pause;
-    public TextMeshProUGUI resume;
-    public TextMeshProUGUI quit;
+   // public TextMeshProUGUI pause;
+    public TextMeshPro resume;
+    public TextMeshPro quit;
     // Start is called before the first frame update
     void Start()
     {
