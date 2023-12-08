@@ -9,14 +9,18 @@ public class PauseMenue : MonoBehaviour
     public KeyCode pauseKey = KeyCode.Escape;
     private bool Ispaused;
     public Restart restart;
+
+    public TextMeshProUGUI pause;
+    public TextMeshProUGUI resume;
+    public TextMeshProUGUI quit;
     // Start is called before the first frame update
     void Start()
     {
-        pauseUi.SetActive(false);
+        pauseUi.gameObject.SetActive(false);
     }
     private void Update()
     {
-        if (Input.GetKeyDown(pauseKey))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             TogglePause();
         }
@@ -29,6 +33,7 @@ public class PauseMenue : MonoBehaviour
         if (Ispaused)
         {
             PauseGame();
+        
         }
         else
         {
@@ -39,7 +44,7 @@ public class PauseMenue : MonoBehaviour
     private void PauseGame()
     {
         Time.timeScale = 0f; // Pause the game by setting time scale to 0
-        pauseUi.SetActive(true);
+        pauseUi.gameObject.SetActive(true);
     }
 
     public void ResumeGame()
