@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PauseMenue : MonoBehaviour
@@ -10,9 +11,8 @@ public class PauseMenue : MonoBehaviour
     private bool Ispaused;
     public Restart restart;
 
-   // public TextMeshProUGUI pause;
-    public TextMeshPro resume;
-    public TextMeshPro quit;
+    // public TextMeshProUGUI pause;
+    public TextMeshProUGUI pause;
     // Start is called before the first frame update
     void Start()
     {
