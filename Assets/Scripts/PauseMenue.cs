@@ -10,7 +10,7 @@ public class PauseMenue : MonoBehaviour
     public KeyCode pauseKey = KeyCode.Escape;
     private bool Ispaused;
     public Restart restart;
-
+     public  Clickswipe swipe;
     // public TextMeshProUGUI pause;
     public TextMeshProUGUI pause;
     // Start is called before the first frame update
@@ -33,7 +33,7 @@ public class PauseMenue : MonoBehaviour
         if (Ispaused)
         {
             PauseGame();
-        
+            swipe = null;
         }
         else
         {
