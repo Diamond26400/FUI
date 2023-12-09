@@ -5,30 +5,32 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Volume : MonoBehaviour
 {
-    [SerializeField] Slider volumeSlider;
-    [SerializeField] AudioSource audioSource;
-   
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Set the slider value to the current volume
-        volumeSlider.value = audioSource.volume;
+    public Slider volumeSlider;
+    public GameObject pauseMenu;
 
-        // Subscribe to the slider's OnValueChanged event
-        volumeSlider.onValueChanged.AddListener(ChangeVolume);
+   public  void Update()
+    {
+        // Check for input or conditions to pause the game
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseGame();
+        }
     }
 
-    // Update is called once per frame
-    void ChangeVolume(float volume)
+     public void PauseGame()
     {
-        audioSource.volume = volume;
-        Debug.Log("Volume changed: " + volume);
-        if (volume == 0)
-        {
-            volume = 0; 
-            volumeSlider.value = 0;
-          
-           
-        }
+        // Toggle the visibility of the pause menu and volume slider
+        bool isPaused = !pauseMenu.activeSelf;
+        pauseMenu.SetActive(isPaused);
+        volumeSlider.gameObject.SetActive(isPaused);
+
+        // You can add more functionality here, like stopping time or other pause-related actions
+        Time.timeScale = isPaused ? 0 : 1;
+    }
+
+    public void SetVolume(float volume)
+    {
+        // Implement your volume setting logic here
+        Debug.Log("Setting volume to: " + volume);
     }
 }
